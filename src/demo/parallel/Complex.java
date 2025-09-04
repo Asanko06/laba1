@@ -62,7 +62,6 @@ public class Complex {
 
     /**
      * Add operation.
-     *
      * @param b summand
      * @return this Complex object whose value is (this + b)
      */
@@ -74,8 +73,7 @@ public class Complex {
 
     /**
      * Multiply operation.
-     *
-     * @param b multiplier
+     * @param  b multiplier
      * @return this Complex object whose value is this * b
      */
     public Complex times(Complex b) {
@@ -96,10 +94,21 @@ public class Complex {
     /**
      * Square of Complex object's length, we're using square of length to
      * eliminate the computation of square root
-     *
      * @return square of length
      */
     public double lengthSQ() {
         return re * re + im * im;
+    }
+
+    public Complex conjugate() {
+        return new Complex(re, -im);
+    }
+
+    public double getRe() {
+        return re;
+    }
+
+    public double getIm() {
+        return im;
     }
 }
